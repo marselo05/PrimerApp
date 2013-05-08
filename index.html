@@ -4,6 +4,7 @@
     <title>Capture Photo</title>
 
     <script type="text/javascript" charset="utf-8" src="js/cordova-2.7.0.js"></script>
+    
     <script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.3.1.min.js"></script>
     <script type="text/javascript" charset="utf-8">
@@ -16,8 +17,9 @@
     document.addEventListener("deviceready",onDeviceReady,false);
 
     $(document).ready(function(){
-      $("#capfot").on("swipeleft",function(){
+      $("body").on("swipeleft",function(){
           capturePhoto();
+          alert("a")
         });
     });
     // Cordova is ready to be used!
