@@ -15,15 +15,18 @@
     //
     document.addEventListener("deviceready",onDeviceReady,false);
 
+    $(document).ready(function(){
+      $("#capfot").on("swipeleft",function(){
+          capturePhoto();
+        });
+    });
     // Cordova is ready to be used!
     //
     function onDeviceReady() {
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
 
-        $("#capfot").on("swipeleft",function(){
-          capturePhoto();
-        });
+        
     }
 
     // Called when a photo is successfully retrieved
